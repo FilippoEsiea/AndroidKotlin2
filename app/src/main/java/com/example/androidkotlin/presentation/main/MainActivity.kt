@@ -7,6 +7,7 @@ import com.example.androidkotlin.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,19 +24,24 @@ class MainActivity : AppCompatActivity() {
                     MaterialAlertDialogBuilder(this)
                         .setTitle("Error")
                         .setMessage("Compte non existant")
-                        . setPositiveButton("Ok"){
-                            dialog, which -> dialog.dismiss()
+                        .setPositiveButton("Ok") { dialog, which ->
+                            dialog.dismiss()
                         }
                         .show()
 
                 }
             }
         })
+
         login_button.setOnClickListener() {
             mainViewModel.onClickedLogin(
                 login_edit.text.toString().trim(),
                 password_edit.text.toString()
             )
+        }
+        create_account_button.setOnClickListener() {
+            val intent = Intent(this, AccountCreation::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidKotlin</string>
+    <string name="Password">Password</string>
+    <string name="Password2">Confirm your password</string>
+    <string name="surname">Surname</string>
+    <string name="Name">Name</string>
+    <string name="email">Email</string>
 </resources>
