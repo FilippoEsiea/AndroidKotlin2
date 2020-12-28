@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.splash.*
 
 
 class Splash : AppCompatActivity() {
-    private val SPLASH_DELAY: Long = 3000 //3 seconds
+    private val SPLASH_DELAY: Long = 3000
     private var mDelayHandler: Handler? = null
     private var progressBarStatus = 0
     var dummy: Int = 0
@@ -22,8 +22,11 @@ class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash)
+        val img: ImageView = findViewById(R.id.splashImage)
+        val slideAnimation = AnimationUtils.loadAnimation(this, R.anim.splash_anim)
+
         mDelayHandler = Handler()
-        //Navigate with delay
+        img.startAnimation(slideAnimation)
         mDelayHandler!!.postDelayed(mRunnable, SPLASH_DELAY)
     }
 
@@ -40,7 +43,7 @@ class Splash : AppCompatActivity() {
     private val mRunnable: Runnable = Runnable {
 
         Thread(Runnable {
-            while (progressBarStatus < 100) {
+/*            while (progressBarStatus < 100) {
                 // performing some dummy operation
                 try {
                     dummy = dummy + 25
@@ -55,10 +58,8 @@ class Splash : AppCompatActivity() {
                 splash_progress_bar.progress = progressBarStatus
             }
 
-            //splash_screen_progress_bar.setProgress(10)
-
+            splash_progress_bar.setProgress(10) */
             launchMainActivity()
-
 
         }).start()
     }
