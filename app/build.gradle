@@ -23,14 +23,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-/*
+
     dataBinding {
         enabled true
     }
     compileOptions {
         targetCompatibility = "8"
         sourceCompatibility = "8"
-    } */
+    }
 }
 
 dependencies {
@@ -116,6 +116,9 @@ dependencies {
     //MOSHI
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+
+    implementation 'com.google.android.material:material:1.2.1'
+
 
     /*
         //RxJava

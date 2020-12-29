@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="?android:attr/listPreferredItemHeight"
-    android:padding="6dip">
-
+    android:padding="6dip"
+    android:background="?attr/selectableItemBackground"
+    android:minHeight="?attr/minTouchTargetSize">>
     <TextView
         android:id="@+id/symbol"
         android:layout_width="fill_parent"
@@ -39,5 +40,5 @@
         android:layout_marginRight="6dip"
         android:layout_marginBottom="0dp"
         android:contentDescription="TODO"
-        android:src="@drawable/ic_android" />
+        android:src="@drawable/logo2" />
 </RelativeLayout>

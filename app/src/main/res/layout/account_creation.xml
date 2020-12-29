@@ -90,7 +90,7 @@
         android:layout_width="361dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:text="Sign up !"
+        android:text="SIGN UP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

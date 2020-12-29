@@ -40,9 +40,16 @@ class MainActivity : AppCompatActivity() {
                 password_edit.text.toString()
             )
         }
-        create_account_button.setOnClickListener() {
+
+        login_button.setOnClickListener() {
             val intent = Intent(this, SymbolList::class.java)
             startActivity(intent)
         }
+
+        create_account_button.setOnClickListener() {
+            val intent = Intent(this, AccountCreation::class.java)
+            startActivity(intent)
+        }
+
     }
 }

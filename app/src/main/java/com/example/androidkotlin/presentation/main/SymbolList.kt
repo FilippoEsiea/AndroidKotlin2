@@ -1,5 +1,6 @@
 package com.example.androidkotlin.presentation.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -21,7 +22,7 @@ import com.example.androidkotlin.data.local.models.models.Results
 import com.example.androidkotlin.data.local.models.models.Symbol
 
 
-class SymbolList : AppCompatActivity() {
+class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener {
     lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +42,7 @@ class SymbolList : AppCompatActivity() {
         api.getAllSymbol().enqueue(object : Callback<Results> {
             override fun onResponse(call: Call<Results>, response: Response<Results>) {
                 if (response.body()!!.data.isNotEmpty()) {
-                    showData(response.body()!!.data)
+                    showData(response.body()!!.data as MutableList<Symbol>)
                 }
                 Toast.makeText(this@SymbolList, "response successful", Toast.LENGTH_LONG)
             }
@@ -61,9 +62,21 @@ class SymbolList : AppCompatActivity() {
         })
     }
 
-    private fun showData(symbolList: List<Symbol>) {
+    private fun showData(symbolList: MutableList<Symbol>) {
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this@SymbolList)
-        recyclerView.adapter = SymbolAdapter(symbolList)
+        recyclerView.adapter = SymbolAdapter(symbolList, this)
+    }
+
+    override fun onItemClick(symbol: Symbol, position: Int) {
+
+        val intent = Intent(this, DetailSymbol::class.java)
+
+        intent.putExtra("symbol", symbol.symbol)
+        intent.putExtra("name", symbol.name)
+        intent.putExtra("rank", symbol.rank)
+        intent.putExtra("price_usd", symbol.price_usd)
+
+        startActivity(intent)
     }
 }
