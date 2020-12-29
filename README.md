@@ -1,4 +1,4 @@
-# FinanceHUB
+# CryptoHUB
 
 CryptoHUB est une application de cryptomonnaies déstinée à l'utilisation mobile pour avoir des informations sur les différentes cryptomonnaies en fonction de leur plateforme d'échange.
 
