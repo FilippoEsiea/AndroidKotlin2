@@ -50,18 +50,18 @@ En appuyant sur Login, on affiche une liste de type Recyclerview qui permet à l
 En appuyant sur une des cryptomonnaies de la liste, l'utilisateur accède à un autre écran qui lui permet de voir les détails de cette dernière (symbole, nom, rang et prix en US dollar).
 Lorsque l'application est fermée, l'utilisteur reçoit quotidiennement une notification Push grâce au Cloud Messaging FireBase. Le message l'invite à acheter des actions :D .
 
-###Ecran animé (Splash)
+### Ecran animé (Splash)
 La première activité montre un écran d'accueil Splash avec une animation qui fait apparaître le nom de l'application. 
 
-###Login (champs texte + boutons)
+### Login (champs texte + boutons)
 La deuxième activité est un écran de Login.
 
-###RecyclerView + Appel API Rest
+### RecyclerView + Appel API Rest
 La troisième activité
 
-###Détail élément
+### Détail élément
 On peut observer le détail avec symbole, nom, rang, et prix en US dollar
 
-###Ecran Création de compte
+### Ecran Création de compte
 
 ![alt_text](https://github.com/FilippoEsiea/FinanceHUB/blob/master/%C3%A9cran3d.PNG)
