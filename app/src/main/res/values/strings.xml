@@ -5,4 +5,7 @@
     <string name="surname">Surname</string>
     <string name="Name">Name</string>
     <string name="email">Email</string>
+    <string name="home">Home</string>
+    <string name="back">Back</string>
+    <string name="settings">Settings</string>
 </resources>
