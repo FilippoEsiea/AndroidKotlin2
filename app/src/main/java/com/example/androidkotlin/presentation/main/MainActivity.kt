@@ -20,12 +20,15 @@ class MainActivity : AppCompatActivity() {
 
         mainViewModel.loginLiveData.observe(this, Observer {
             when (it) {
-                is LoginSuccess -> TODO()
+                is LoginSuccess -> {
+                    val intent = Intent(this, SymbolList::class.java)
+                    startActivity(intent)
+                }
                 LoginError -> {
                     MaterialAlertDialogBuilder(this)
                         .setTitle("Error")
-                        .setMessage("Compte non existant")
-                        .setPositiveButton("Ok") { dialog, which ->
+                        .setMessage("Non-existing account")
+                        .setPositiveButton("OK") { dialog, which ->
                             dialog.dismiss()
                         }
                         .show()
@@ -41,15 +44,9 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        login_button.setOnClickListener() {
-            val intent = Intent(this, SymbolList::class.java)
-            startActivity(intent)
-        }
-
         create_account_button.setOnClickListener() {
             val intent = Intent(this, AccountCreation::class.java)
             startActivity(intent)
         }
-
     }
 }

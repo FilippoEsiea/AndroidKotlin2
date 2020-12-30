@@ -7,26 +7,25 @@ import com.example.androidkotlin.domain.entity.User
 import com.example.androidkotlin.domain.usecase.CreateUserUseCase
 import com.example.androidkotlin.domain.usecase.GetUserUseCase
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MainViewModel(
+class CreateAccountViewModel(
+    private val createUserUseCase: CreateUserUseCase,
     private val getUserUseCase: GetUserUseCase
 ) : ViewModel() {
-    val loginLiveData: MutableLiveData<LoginStatus> = MutableLiveData()
+    val createLiveData: MutableLiveData<CreateStatus> = MutableLiveData()
 
-    fun onClickedLogin(emailUser: String, password: String) {
+    fun onClickedCreate(emailNewUser: String, passwordNewUser: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val user = getUserUseCase.invoke(emailUser, password)
-            val loginStatus = if (user != null) {
-                LoginSuccess(user.email, user.password)
-
+            val newUser = createUserUseCase.invoke(User(emailNewUser, passwordNewUser))
+            val createStatus = if (newUser != null) {
+                CreateSuccess(emailNewUser, passwordNewUser)
             } else {
-                LoginError
+                CreateError
             }
             withContext(Dispatchers.Main) {
-                loginLiveData.value = loginStatus
+                createLiveData.value = createStatus
             }
         }
     }

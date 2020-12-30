@@ -7,6 +7,7 @@ import com.example.androidkotlin.data.local.models.DatabaseDao
 import com.example.androidkotlin.data.repository.UserRepository
 import com.example.androidkotlin.domain.usecase.CreateUserUseCase
 import com.example.androidkotlin.domain.usecase.GetUserUseCase
+import com.example.androidkotlin.presentation.main.CreateAccountViewModel
 import com.example.androidkotlin.presentation.main.MainViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
@@ -14,7 +15,8 @@ import org.koin.dsl.module
 import java.security.AccessControlContext
 
 val presentationModule = module {
-    factory { MainViewModel(get(), get()) }
+    factory { MainViewModel(get()) }
+    factory { CreateAccountViewModel(get(), get()) }
 }
 
 val domainModule: Module = module {
@@ -28,7 +30,7 @@ val dataModule: Module = module {
 }
 
 fun createDataBase(context: Context): DatabaseDao {
-    val appDatabase : AppDatabase = Room.databaseBuilder(
+    val appDatabase: AppDatabase = Room.databaseBuilder(
         context,
         AppDatabase::class.java, "database-name"
     ).build()
