@@ -54,32 +54,25 @@ La première activité est un écran d'accueil Splash.
 ### Login (champs texte + boutons)
 La deuxième activité est un écran de Login qui gère les différentes erreurs.
 
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/login.PNG" width="300"> 
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/loginError1.PNG" width="300">
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/login.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/loginError1.PNG" width="300">
 
 
 ### RecyclerView + Appel API Rest
 La troisième activité est une liste d'éléments avec une barre de recherche.
 
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerView.PNG" width="300">
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewFilter.PNG" width="300">
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewSearch.PNG" width="300">
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerView.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewFilter.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewSearch.PNG" width="300">
 
 
 ### Détail élément
 On peut observer le détail avec symbole, nom, rang, et prix en US dollar.
 
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail.PNG" width="300">
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail2.PNG" width="300">
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail2.PNG" width="300">
 
 
 ### Ecran Création de compte
 Voici l'écran de création de compte, avec les différentes erreurs possibles.
 
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccount.PNG" width="300">
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountCreated.PNG" width="300">
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError1.PNG" width="300">
-<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError2.PNG" width="300">
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccount.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountCreated.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError1.PNG" width="300"> <img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError2.PNG" width="300">
 
 
 ### Animation
