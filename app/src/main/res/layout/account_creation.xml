@@ -125,6 +125,7 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup_button"
         android:layout_width="361dp"
@@ -139,5 +140,4 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
