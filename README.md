@@ -45,35 +45,41 @@ En appuyant sur Login, on affiche une liste de type Recyclerview qui permet à l
 En appuyant sur une des cryptomonnaies de la liste, l'utilisateur accède à un autre écran qui lui permet de voir les détails de cette dernière (symbole, nom, rang et prix en US dollar).
 Lorsque l'application est fermée, l'utilisteur reçoit quotidiennement une notification Push grâce au Cloud Messaging FireBase. Le message l'invite à acheter des actions :D .
 
-### Ecran animé (Splash)
-La première activité montre un écran d'accueil Splash avec une animation qui fait apparaître le nom de l'application. 
-
-![alt_text](https://github.com/FilippoEsiea/FinanceHUB/blob/master/%C3%A9cran3d.PNG)
-
-
 ### Login (champs texte + boutons)
 La deuxième activité est un écran de Login.
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/login.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/loginError1.PNG)
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/login.PNG" width="300"> 
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/loginError1.PNG" width="300">
 
 
 ### RecyclerView + Appel API Rest
 La troisième activité
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerView.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewFilter.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewSearch.PNG)
+
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerView.PNG" width="300">
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewFilter.PNG" width="300">
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/recyclerViewSearch.PNG" width="300">
 
 
 ### Détail élément
 On peut observer le détail avec symbole, nom, rang, et prix en US dollar
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail2.PNG)
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail.PNG" width="300">
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/detail2.PNG" width="300">
 
 ### Ecran Création de compte
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccount.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountCreated.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError1.PNG)
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError2.PNG)
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccount.PNG" width="300">
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountCreated.PNG" width="300">
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError1.PNG" width="300">
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/createAccountError2.PNG" width="300">
 
 ### Animation
-![alt_text](https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/bloggif_5fecaf56e58e3.gif)
+
+<img src = "https://github.com/FilippoEsiea/AndroidKotlin2/blob/master/bloggif_5fecaf56e58e3.gif" width="300">
