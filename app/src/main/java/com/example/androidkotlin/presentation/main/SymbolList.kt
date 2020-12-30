@@ -20,6 +20,9 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.io.IOException
 import com.example.androidkotlin.data.local.models.models.Results
 import com.example.androidkotlin.data.local.models.models.Symbol
+import kotlinx.android.synthetic.main.account_creation.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.symbol_detail.*
 
 
 class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener {
@@ -60,6 +63,11 @@ class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener 
                 }
             }
         })
+
+        backButton3.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showData(symbolList: MutableList<Symbol>) {
@@ -74,9 +82,10 @@ class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener 
 
         intent.putExtra("symbol", symbol.symbol)
         intent.putExtra("name", symbol.name)
-        intent.putExtra("rank", symbol.rank)
+        intent.putExtra("rank", symbol.rank.toString())
         intent.putExtra("price_usd", symbol.price_usd)
 
         startActivity(intent)
     }
+
 }

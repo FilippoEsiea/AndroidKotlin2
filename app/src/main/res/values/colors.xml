@@ -4,10 +4,12 @@
     <color name="colorDark">#004c8c</color>
     <color name="coloLight">#58a5f0</color>
 
-    <color name="colorPrimary">#000</color>
+    <color name="colorPrimary">#BB86FC</color>
+    <color name="colorPrimary2">#9C4CFD</color>
     <color name="colorPrimaryDark">#000</color>
-    <color name="colorAccent">#96979b</color>
+    <color name="colorAccent">#777777</color>
 
+    <color name="colorSecondary">#03DAC5</color>
     <color name="color_background">#000</color>
     <color name="color_desire_front">#96979b</color>
     <color name="color_desire_font">#96979b</color>

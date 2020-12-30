@@ -1,5 +1,6 @@
 package com.example.androidkotlin.presentation.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,8 @@ import com.example.androidkotlin.data.local.models.models.Symbol
 import kotlinx.android.synthetic.main.account_creation.*
 import kotlinx.android.synthetic.main.symbol_detail.view.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.backButton1
+import kotlinx.android.synthetic.main.symbol_detail.*
 
 
 class DetailSymbol : AppCompatActivity() {
@@ -15,6 +18,11 @@ class DetailSymbol : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.symbol_detail)
+
+        val symbolText: TextView = findViewById(R.id.Details)
+        val nameText: TextView = findViewById(R.id.Name)
+        val rankText: TextView = findViewById(R.id.Rank)
+        val priceText: TextView = findViewById(R.id.Price)
 
         val symbolView: TextView = findViewById(R.id.symbol)
         val nameView: TextView = findViewById(R.id.name)
@@ -30,5 +38,10 @@ class DetailSymbol : AppCompatActivity() {
         nameView.setText(name)
         rankView.setText(rank)
         priceView.setText(price)
+
+        backButton4.setOnClickListener {
+            val intent = Intent(this, SymbolList::class.java)
+            startActivity(intent)
+        }
     }
 }

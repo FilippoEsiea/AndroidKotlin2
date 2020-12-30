@@ -4,7 +4,7 @@
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:padding="6dip"
     android:background="?attr/selectableItemBackground"
-    android:minHeight="?attr/minTouchTargetSize">>
+    android:minHeight="?attr/minTouchTargetSize">
     <TextView
         android:id="@+id/symbol"
         android:layout_width="fill_parent"
@@ -15,12 +15,15 @@
         android:ellipsize="marquee"
         android:singleLine="true"
         android:text="Symbol"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_alignWithParentIfMissing="true"
         android:layout_above="@id/name"
         android:layout_alignParentTop="true"
@@ -28,7 +31,7 @@
         android:layout_toRightOf="@id/image"
         android:gravity="center_vertical"
         android:text="Name"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary2"
         android:textSize="16sp" />
 
     <ImageView

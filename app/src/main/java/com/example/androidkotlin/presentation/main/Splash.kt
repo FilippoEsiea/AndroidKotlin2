@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.splash.*
 
 
 class Splash : AppCompatActivity() {
-    private val SPLASH_DELAY: Long = 3000
+    private val SPLASH_DELAY: Long = 5000
     private var mDelayHandler: Handler? = null
     private var progressBarStatus = 0
     var dummy: Int = 0
@@ -43,24 +43,7 @@ class Splash : AppCompatActivity() {
     private val mRunnable: Runnable = Runnable {
 
         Thread(Runnable {
-/*            while (progressBarStatus < 100) {
-                // performing some dummy operation
-                try {
-                    dummy = dummy + 25
-                    Thread.sleep(100)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                // tracking progress
-                progressBarStatus = dummy
-
-                // Updating the progress bar
-                splash_progress_bar.progress = progressBarStatus
-            }
-
-            splash_progress_bar.setProgress(10) */
             launchMainActivity()
-
         }).start()
     }
 

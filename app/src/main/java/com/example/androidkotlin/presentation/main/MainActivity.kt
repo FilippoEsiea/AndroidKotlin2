@@ -9,6 +9,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
 import android.content.Intent
+import kotlinx.android.synthetic.main.account_creation.*
+import kotlinx.android.synthetic.main.activity_main.password_edit
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,5 +50,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AccountCreation::class.java)
             startActivity(intent)
         }
+
+        backButton1.setOnClickListener {
+            val intent = Intent(this, Splash::class.java)
+            startActivity(intent)
+        }
     }
+
+
 }

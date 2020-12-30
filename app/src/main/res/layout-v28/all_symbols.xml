@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".presentation.main.SymbolList">
-
 
     <ImageView
         android:id="@+id/backButton3"
@@ -36,7 +36,6 @@
         android:textColor="@color/colorPrimary2"
         android:textColorHint="@color/colorPrimary"
         android:hint="@string/Search"
-        android:background="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/backButton3"
@@ -44,9 +43,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="400dp"
-        android:layout_height="599dp"
-        android:background="@color/colorAccent"
+        android:layout_width="410dp"
+        android:layout_height="572dp"
+        android:outlineSpotShadowColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
