@@ -1,4 +1,4 @@
-package com.example.androidkotlin.presentation.main
+package com.example.androidkotlin.presentation.account
 
 sealed class CreateStatus
 

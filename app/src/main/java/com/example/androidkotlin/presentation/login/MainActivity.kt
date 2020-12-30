@@ -1,6 +1,5 @@
-package com.example.androidkotlin.presentation.main
+package com.example.androidkotlin.presentation.login
 
-import com.example.androidkotlin.presentation.main.AccountCreation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
@@ -9,17 +8,16 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
 import android.content.Intent
-import kotlinx.android.synthetic.main.account_creation.*
+import com.example.androidkotlin.presentation.account.AccountCreation
+import com.example.androidkotlin.presentation.login.recyclerview.SymbolList
+import com.example.androidkotlin.presentation.main.*
 import kotlinx.android.synthetic.main.activity_main.password_edit
 
 class MainActivity : AppCompatActivity() {
-
     val mainViewModel: MainViewModel by inject()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         mainViewModel.loginLiveData.observe(this, Observer {
             when (it) {
                 is LoginSuccess -> {
@@ -34,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                             dialog.dismiss()
                         }
                         .show()
-
                 }
             }
         })
@@ -56,6 +53,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-
 }

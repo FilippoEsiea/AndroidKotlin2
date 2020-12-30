@@ -1,14 +1,12 @@
-package com.example.androidkotlin.presentation.main
+package com.example.androidkotlin.presentation.login.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ExpandableListView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidkotlin.R
 import com.example.androidkotlin.data.local.models.models.Symbol
-import kotlinx.android.synthetic.main.a_symbol.view.*
 
 class SymbolAdapter(
     private val symbolList: MutableList<Symbol>,
@@ -25,14 +23,12 @@ class SymbolAdapter(
         val symbol = symbolList.elementAtOrNull(position)
         holder.symbolText.text = symbol?.symbol
         holder.nameText.text = symbol?.name
-
         holder.initialize(symbolList.get(position), clickListener)
     }
 
     override fun getItemCount(): Int {
         return symbolList.size
     }
-
 
     class SymbolViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val symbolText: TextView = itemView.findViewById(R.id.symbol)
@@ -41,7 +37,6 @@ class SymbolAdapter(
         fun initialize(symbol: Symbol, action: OnSymbolItemClickListener) {
             symbolText.text = symbol.symbol
             nameText.text = symbol.name
-
             itemView.setOnClickListener() {
                 action.onItemClick(symbol, adapterPosition)
             }

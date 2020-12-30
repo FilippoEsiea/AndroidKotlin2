@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".presentation.main.SymbolList">
-
+    tools:context=".presentation.login.recyclerview.SymbolList">
 
     <ImageView
         android:id="@+id/backButton3"
@@ -23,8 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- A RecyclerView with some commonly used attributes -->
-
     <EditText
         android:id="@+id/text"
         android:layout_width="296dp"
@@ -33,10 +30,10 @@
         android:layout_marginTop="26dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="37dp"
+        android:background="@color/colorAccent"
+        android:hint="@string/Search"
         android:textColor="@color/colorPrimary2"
         android:textColorHint="@color/colorPrimary"
-        android:hint="@string/Search"
-        android:background="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/backButton3"

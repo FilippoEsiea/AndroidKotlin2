@@ -1,18 +1,16 @@
-package com.example.androidkotlin.presentation.main
+package com.example.androidkotlin.presentation.account
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.androidkotlin.domain.entity.User
 import com.example.androidkotlin.domain.usecase.CreateUserUseCase
-import com.example.androidkotlin.domain.usecase.GetUserUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class CreateAccountViewModel(
-    private val createUserUseCase: CreateUserUseCase,
-    private val getUserUseCase: GetUserUseCase
+    private val createUserUseCase: CreateUserUseCase
 ) : ViewModel() {
     val createLiveData: MutableLiveData<CreateStatus> = MutableLiveData()
 

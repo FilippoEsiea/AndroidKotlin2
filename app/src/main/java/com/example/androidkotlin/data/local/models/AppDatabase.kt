@@ -9,6 +9,7 @@ import com.example.androidkotlin.data.local.models.models.UserLocal
         UserLocal::class
     ), version = 1
 )
+
 abstract class AppDatabase : RoomDatabase() {
     abstract fun databaseDao(): DatabaseDao
 }

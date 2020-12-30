@@ -10,5 +10,4 @@ data class Symbol(
     @Json(name = "name") val name: String,
     @Json(name = "rank") val rank: Int,
     @Json(name = "price_usd") val price_usd: String
-) : Parcelable {
-}
+) : Parcelable

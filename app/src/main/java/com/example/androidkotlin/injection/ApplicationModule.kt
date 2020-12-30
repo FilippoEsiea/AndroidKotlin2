@@ -7,16 +7,15 @@ import com.example.androidkotlin.data.local.models.DatabaseDao
 import com.example.androidkotlin.data.repository.UserRepository
 import com.example.androidkotlin.domain.usecase.CreateUserUseCase
 import com.example.androidkotlin.domain.usecase.GetUserUseCase
-import com.example.androidkotlin.presentation.main.CreateAccountViewModel
-import com.example.androidkotlin.presentation.main.MainViewModel
+import com.example.androidkotlin.presentation.account.CreateAccountViewModel
+import com.example.androidkotlin.presentation.login.MainViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
 import org.koin.dsl.module
-import java.security.AccessControlContext
 
 val presentationModule = module {
     factory { MainViewModel(get()) }
-    factory { CreateAccountViewModel(get(), get()) }
+    factory { CreateAccountViewModel(get()) }
 }
 
 val domainModule: Module = module {

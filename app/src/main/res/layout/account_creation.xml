@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".presentation.main.AccountCreation">
+    tools:context=".presentation.account.AccountCreation">
 
     <ImageView
         android:id="@+id/backButton2"
@@ -51,11 +51,11 @@
         android:layout_marginRight="13dp"
         android:hint="@string/Name"
         app:hintTextColor="@color/colorPrimary"
-        app:placeholderTextColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="@id/surname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:placeholderTextColor="@color/colorPrimary"
         app:startIconDrawable="@drawable/ic_account_box_black_18dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -125,7 +125,6 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signup_button"
         android:layout_width="361dp"
@@ -140,6 +139,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

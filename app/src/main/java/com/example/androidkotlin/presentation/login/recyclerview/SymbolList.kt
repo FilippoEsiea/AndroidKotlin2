@@ -1,4 +1,4 @@
-package com.example.androidkotlin.presentation.main
+package com.example.androidkotlin.presentation.login.recyclerview
 
 import android.content.Intent
 import android.os.Bundle
@@ -20,10 +20,11 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.io.IOException
 import com.example.androidkotlin.data.local.models.models.Results
 import com.example.androidkotlin.data.local.models.models.Symbol
+import com.example.androidkotlin.presentation.login.MainActivity
+import com.example.androidkotlin.presentation.main.DetailSymbol
 import kotlinx.android.synthetic.main.account_creation.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.symbol_detail.*
-
 
 class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener {
     lateinit var recyclerView: RecyclerView
@@ -59,7 +60,6 @@ class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener 
                     Toast.makeText(this@SymbolList, "conversion error", Toast.LENGTH_LONG)
                         .show()
                     Log.e("CONVERSION ERROR", t.message)
-
                 }
             }
         })
@@ -77,15 +77,11 @@ class SymbolList : AppCompatActivity(), SymbolAdapter.OnSymbolItemClickListener 
     }
 
     override fun onItemClick(symbol: Symbol, position: Int) {
-
         val intent = Intent(this, DetailSymbol::class.java)
-
         intent.putExtra("symbol", symbol.symbol)
         intent.putExtra("name", symbol.name)
         intent.putExtra("rank", symbol.rank.toString())
         intent.putExtra("price_usd", symbol.price_usd)
-
         startActivity(intent)
     }
-
 }

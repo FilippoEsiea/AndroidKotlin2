@@ -8,11 +8,11 @@ import com.example.androidkotlin.domain.entity.User
 class UserRepository(
     private val databaseDao: DatabaseDao
 ) {
-    suspend fun createUser(user: User){
+    fun createUser(user: User) {
         databaseDao.insert(user.toData())
     }
 
-    fun getUser(email: String, password: String) : User? {
+    fun getUser(email: String, password: String): User? {
         val userLocal = databaseDao.findByName(email, password)
         return userLocal?.toEntity()
     }

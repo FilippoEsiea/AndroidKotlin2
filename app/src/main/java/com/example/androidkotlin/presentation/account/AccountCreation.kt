@@ -1,10 +1,11 @@
-package com.example.androidkotlin.presentation.main
+package com.example.androidkotlin.presentation.account
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.example.androidkotlin.R
+import com.example.androidkotlin.presentation.login.MainActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.account_creation.*
 import org.koin.android.ext.android.inject
@@ -32,7 +33,6 @@ class AccountCreation : AppCompatActivity() {
                 }
                 passwordCreate.isNullOrEmpty()
                 -> {
-
                     MaterialAlertDialogBuilder(this)
                         .setTitle("Error")
                         .setMessage("Password must be filled")

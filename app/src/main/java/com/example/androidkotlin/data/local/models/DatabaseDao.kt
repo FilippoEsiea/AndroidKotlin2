@@ -1,6 +1,5 @@
 package com.example.androidkotlin.data.local.models
 
-import android.provider.ContactsContract
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert

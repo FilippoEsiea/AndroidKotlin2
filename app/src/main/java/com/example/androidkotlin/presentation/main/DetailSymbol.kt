@@ -5,16 +5,10 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidkotlin.R
-import com.example.androidkotlin.data.local.models.models.Symbol
-import kotlinx.android.synthetic.main.account_creation.*
-import kotlinx.android.synthetic.main.symbol_detail.view.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.backButton1
+import com.example.androidkotlin.presentation.login.recyclerview.SymbolList
 import kotlinx.android.synthetic.main.symbol_detail.*
 
-
 class DetailSymbol : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.symbol_detail)
